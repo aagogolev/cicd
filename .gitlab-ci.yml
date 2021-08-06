@@ -1,0 +1,16 @@
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - echo Building project 
+    - echo $CI_REGISTRY_USER
+    - echo $CI_REGISTRY_PASSWORD
+    - echo $CI_REGISTRY
+    #- docker login -u "$CI_REGISTRY_USER" -p efE3_1sCWzy8ropNTyr2 $CI_REGISTRY
+    #- docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
+    - docker login 192.168.5.254
+    - echo !!!!!!!!!!!
+  tags:
+    - docker  
