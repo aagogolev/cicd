@@ -11,8 +11,10 @@ build:
     #- docker login -u "$CI_REGISTRY_USER" -p efE3_1sCWzy8ropNTyr2 $CI_REGISTRY
     #- docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
     - docker login gitlab.ru:4567
+    - echo login
     - docker build -t gitlab.ru:4567/alexandr_gogolev/cicd/cicd/
+    - echo build 
     - docker push gitlab.ru:4567/alexandr_gogolev/cicd
-    - echo !!!!!!!!!!!
+    - echo push
   tags:
     - docker  
