@@ -1,5 +1,6 @@
 stages:
   - build
+  - deploy
 
 build:
   stage: build
@@ -20,3 +21,11 @@ build:
     - echo push
   tags:
     - docker1  
+
+deploy:
+  stage: deploy
+  script:
+    - echo !!!!!!!!!!!
+  tags:
+    - docker1
+    
