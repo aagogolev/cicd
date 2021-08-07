@@ -10,6 +10,7 @@ build:
     - echo $CI_REGISTRY_USER
     - echo $CI_REGISTRY_PASSWORD
     - echo $CI_REGISTRY
+    - cd cicd
     - docker login -u "$CI_REGISTRY_USER" -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
     - docker build --pull -t "$CI_REGISTRY_IMAGE" .
     - docker push "$CI_REGISTRY_IMAGE"
@@ -21,6 +22,7 @@ deploy:
   image: jonaskello/docker-and-compose
   script:
     - echo Deploy project
+    - cd cicd
     - docker login -u "$CI_REGISTRY_USER" -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
     - docker-compose down
     - docker-compose up -d
