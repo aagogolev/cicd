@@ -1,6 +1,6 @@
 FROM python:3.6
 
-RUN ls ./cicd
+RUN ls
 
 RUN git clone https://gitlab.ru/alexandr_gogolev/cicd.git
 
