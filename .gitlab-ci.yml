@@ -24,7 +24,6 @@ deploy:
     - docker login -u "$CI_REGISTRY_USER" -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
     - docker-compose down
     - docker-compose up -d
-    
   tags:
     - docker1
     
