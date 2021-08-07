@@ -22,7 +22,7 @@
 
   app:
      container_name: application
-     image: ${IMAGE_APP_TAG}
+     image: gitlab.ru:4567/alexandr_gogolev/cicd:latest
      build: .
      depends_on:
       - db
