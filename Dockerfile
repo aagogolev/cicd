@@ -2,10 +2,10 @@ FROM python:3.6
 
 RUN git clone https://gitlab.ru/alexandr_gogolev/cicd.git
 
-RUN pip install -r /python-sample-app/requirements.txt
+RUN pip install -r /cicd/requirements.txt
 
-ENV FLASK_APP=/python-sample-app/app.py
+ENV FLASK_APP=/cicd/app.py
 
-WORKDIR /python-sample-app
+WORKDIR /cicd
 
 EXPOSE 500
