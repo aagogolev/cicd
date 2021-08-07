@@ -10,4 +10,4 @@ ENV FLASK_APP=./cicd/app.py
 
 WORKDIR ./cicd
 
-EXPOSE 5000
+EXPOSE 500
