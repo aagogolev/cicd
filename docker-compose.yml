@@ -22,7 +22,7 @@
 
   app:
      container_name: application
-     image: gitlab.ru:4567/alexandr_gogolev/cicd:latest
+     image: gitlab.ru:4567/alexandr_gogolev/cicd:$CI_COMMIT_REF_NAME
      build: .
      depends_on:
       - db
