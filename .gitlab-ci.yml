@@ -16,7 +16,7 @@ build:
     - docker push "$CI_REGISTRY_IMAGE"
     #- docker build -t gitlab.ru:4567/alexandr_gogolev/cicd/cicd/
     - echo build 
-    #- docker push gitlab.ru:4567/alexandr_gogolev/cicd
+    ###- docker push gitlab.ru:4567/alexandr_gogolev/cicd
     - echo push
   tags:
     - docker1  
