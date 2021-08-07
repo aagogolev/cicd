@@ -17,4 +17,4 @@ build:
     - docker push gitlab.ru:4567/alexandr_gogolev/cicd
     - echo push
   tags:
-    - docker  
+    - docker1  
