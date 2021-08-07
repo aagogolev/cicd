@@ -28,7 +28,7 @@
       - db
      environment:
       - POSTGRESQL_URL=postgresql://worker:worker@db/python_sample_app_db  
-     command: bash -c 'flask db upgrade && python ./cicd/app.py'
+     command: bash -c 'flask db upgrade && python app.py'
      ports:
       - 5000:5000
      networks:
